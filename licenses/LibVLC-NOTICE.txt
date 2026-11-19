@@ -1,0 +1,18 @@
+LibVLC (VLC for Android 3.6.5) and LibVLCSharp 3.10.2 in this app
+===================================================================
+
+This app plays video with LibVLC (VideoLAN; NuGet package VideoLAN.LibVLC.Android 3.6.5, built from the VLC for Android 3.6.5
+sources) through LibVLCSharp 3.10.2 (VideoLAN). Both are licensed under the GNU Lesser General Public License, version 2.1 or (at
+your option) any later version. The full licence text is in LGPL-2.1.txt next to this file; the VLC authors are listed in
+VLC-AUTHORS.txt.
+
+Copyright (C) the VLC authors and VideoLAN (LibVLC); Copyright (C) VideoLAN and the LibVLCSharp authors (LibVLCSharp).
+
+Source code
+-----------
+- LibVLC for Android: https://code.videolan.org/videolan/vlc-android/-/tree/3.6.5
+- LibVLCSharp:        https://code.videolan.org/videolan/LibVLCSharp/-/tree/3.10.2
+- The Android build:  https://code.videolan.org/videolan/libvlc-nuget
+
+LibVLC is used as unmodified shared libraries (lib/<abi>/libvlc.so in the APK), which you may replace with your own build of the same
+version under the terms of the LGPL.

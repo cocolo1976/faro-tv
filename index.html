@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Not advertised: for the people who were given the address (docs/family-test-plan.md, D-F-2) -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Faro for TV</title>
+<style>
+  /* The app's own colours (src/IptvPlayer.Ui/Theme/Theme.axaml). No fonts, scripts or pictures from anywhere else (D-F-3). */
+  :root { --bg: #0E1013; --surface: #15181D; --raised: #1F232A; --line: #2A2F37; --text: #ECEDEE; --soft: #C8CDD3; --muted: #A3A9B2; --accent: #F2A541; }
+  * { box-sizing: border-box; }
+  html { background: var(--bg); color: var(--text); font: 20px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; -webkit-text-size-adjust: 100%; }
+  body { margin: 0; }
+  main { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+  .mark { display: flex; align-items: center; gap: .6rem; margin: 0 0 2rem; font-weight: 700; font-size: 1.15rem; }
+  .dot { width: .8rem; height: .8rem; border-radius: 50%; background: var(--accent); }
+  h1 { margin: 0 0 .6rem; font-size: 2.3rem; line-height: 1.15; letter-spacing: -.01em; text-wrap: balance; }
+  .lede { margin: 0; color: var(--soft); font-size: 1.15rem; max-width: 34rem; }
+  .get { margin: 2.2rem 0 2.6rem; }
+  /* A big target: the TV's browser moves a pointer with the remote's arrows */
+  .download { display: block; padding: 1.15rem 1.5rem; border-radius: .8rem; background: var(--accent); color: #17130B; font-size: 1.35rem; font-weight: 700; text-align: center; text-decoration: none; }
+  .download:hover { filter: brightness(1.07); }
+  a:focus-visible { outline: .22rem solid var(--text); outline-offset: .25rem; }
+  .facts { margin: .9rem 0 0; color: var(--muted); font-size: .95rem; text-align: center; font-variant-numeric: tabular-nums; }
+  section.card { margin: 0 0 1.1rem; padding: 1.4rem 1.5rem 1.5rem; border: 1px solid var(--line); border-radius: .9rem; background: var(--surface); }
+  h2 { margin: 0 0 .7rem; font-size: 1.2rem; }
+  ol, ul { margin: 0; padding-left: 1.4rem; }
+  li { margin: 0 0 .55rem; padding-left: .2rem; }
+  li:last-child { margin-bottom: 0; }
+  ol li::marker { color: var(--accent); font-weight: 700; }
+  ul li::marker { color: var(--muted); }
+  p { margin: 0 0 .7rem; }
+  p:last-child { margin-bottom: 0; }
+  strong { font-weight: 700; }
+  .type { padding: .1rem .5rem; border-radius: .35rem; background: var(--raised); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .95em; white-space: nowrap; }
+  footer { margin-top: 2.2rem; color: var(--muted); font-size: .8rem; }
+  footer a { color: var(--soft); }
+  .sum { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; overflow-wrap: anywhere; }
+  @media (max-width: 30rem) { html { font-size: 17px; } h1 { font-size: 1.9rem; } main { padding-top: 1.75rem; } }
+</style>
+</head>
+<body>
+<main>
+  <p class="mark"><span class="dot"></span>Faro</p>
+  <h1>Faro for your TV</h1>
+  <p class="lede">A player for the IPTV subscription you already have. It has no channels of its own.</p>
+
+  <div class="get">
+    <a class="download" href="https://github.com/cocolo1976/faro-tv/releases/latest/download/faro-tv.apk">Download Faro for TV</a>
+    <p class="facts">Version 0.3.112 · November 19, 2026 · 90 MB · Google TV and Android TV</p>
+  </div>
+
+  <section class="card">
+    <h2>Before you start</h2>
+    <ul>
+      <li><strong>A TV or stick with Google TV or Android TV.</strong> Not yet for Fire TV Stick, iPhone or Apple TV.</li>
+      <li><strong>Your own IPTV subscription:</strong> the server address, the user name and the password your provider gave you. Faro comes with no subscription.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Install it on the TV</h2>
+    <ol>
+      <li>On the TV, open the Play Store and install <strong>Downloader</strong> (by AFTVnews).</li>
+      <li>Open Downloader, type <span class="type">faro.bigintdata.com</span> and choose Go. This page opens: choose <strong>Download</strong>.</li>
+      <li>The first time, the TV asks whether Downloader may install apps. Choose Settings, turn it on for Downloader, and go back. Then choose <strong>Install</strong>, and <strong>Open</strong>.</li>
+      <li>Sign in with the server address, user name and password from your provider.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2>When a new version comes</h2>
+    <p>Come back to this address and do the same again. The new version installs over the old one, and your sign-in and favorites stay.</p>
+    <p>The version you have is in the app, under Settings.</p>
+  </section>
+
+  <section class="card">
+    <h2>If something goes wrong</h2>
+    <p>Tell the person who sent you this address what you were doing when it happened, and the version shown in Settings.</p>
+  </section>
+
+  <footer>
+    <p>To check the file, its SHA-256 is <span class="sum">01c858899ae757d453fbfd3ff445009844d5fe3690dbd183521ae8ea1d6d0a52</span></p>
+    <p>Faro plays video with LibVLC, under the LGPL 2.1, which you may replace with your own build:
+      <a href="licenses/LibVLC-NOTICE.txt">notice and source</a>, <a href="licenses/LGPL-2.1.txt">licence</a>, <a href="licenses/VLC-AUTHORS.txt">authors</a>.
+      Fonts: IBM Plex (<a href="licenses/IBM-Plex-OFL.txt">OFL</a>). Icons: Lucide (<a href="licenses/Lucide-LICENSE.txt">licence</a>).</p>
+  </footer>
+</main>
+</body>
+</html>
